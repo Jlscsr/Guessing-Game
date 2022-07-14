@@ -45,6 +45,7 @@ section h3,
 #number-display {
   color: white;
   font-size: 2rem;
+  width: 250px;
 }
 
 section .display-content,
@@ -71,6 +72,7 @@ section .user-answer {
   flex-direction: column;
   gap: 10px;
   padding: 2em;
+  text-align: center;
 }
 
 .user-answer #answer {
@@ -94,4 +96,8 @@ section .user-answer {
   cursor: pointer;
   color: white;
   background-color: #9880fac1;
+}
+
+.user-answer button:hover {
+  background-color: #9880fab6;
 }
