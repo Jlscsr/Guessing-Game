@@ -1,0 +1,33 @@
+/* This function maps the given label to a corresponding button background color. */
+@function setBgColor($label) {
+  /* Check the given label and return the corresponding button background color variable. */
+  @if $label == "easy" {
+    @return var(--easy-btn-bg);
+  } @else if $label == "medium" {
+    @return var(--medium-btn-bg);
+  } @else if $label == "hard" {
+    @return var(--hard-btn-bg);
+  } @else {
+    @return var(--impossible-btn-bg);
+  }
+}
+
+/* This mixin centers an element within a column using Flexbox. */
+@mixin columnCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* This mixin provides default button styles for a guessing game. */
+@mixin btnStyle() {
+  width: 100%;
+  padding: 0.6rem 1.3rem;
+  font-family: var(--text-regular);
+  font-size: 20px;
+  color: var(--primary-color);
+  cursor: pointer;
+  outline: none;
+  border: none;
+}

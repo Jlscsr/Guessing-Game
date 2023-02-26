@@ -5,30 +5,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./dist/main.css">
     <title>Guessing Game</title>
 </head>
 
 <body>
-
-    <header>
-        <h1>Guessing Game</h1>
-        <p>By: Julius Raagas</p>
+    <header class="header">
+        <div class="header__content">
+            <h1 class="header__content__title">Guessing Game</h1>
+            <a href="#" target="_blank" class="header__content__subtitle">by: Julius Raagas</a>
+        </div>
     </header>
 
-    <section>
-        <div class="display-content">
-            <h3 id="display-text">
-                Pick a number between 0-5
-            </h3>
-            <label id="number-display">?</label>
-        </div>
+    <main class="main">
+        <!-- Difficulty Section -->
+        <section class="main__difficulty-container">
+            <div class="main__difficulty-container__title">
+                <h2>Choose difficulty</h2>
+            </div>
+            <div class="main__difficulty-container__options-container">
+                <!-- Easy button -->
+                <div class="main__difficulty-container__options-container__easy">
+                    <button id="easyBtn" class="difficulty-btn-1">Easy</button>
+                </div>
+                <!-- Medium button -->
+                <div class="main__difficulty-container__options-container__easy">
+                    <button id="medBtn" class="difficulty-btn-2">Medium</button>
+                </div>
+                <!-- Hard button -->
+                <div class="main__difficulty-container__options-container__easy">
+                    <button id="hardBtn" class="difficulty-btn-3">Hard</button>
+                </div>
+                <!-- Impossible button -->
+                <div class="main__difficulty-container__options-container__easy">
+                    <button id="impBtn" class="difficulty-btn-4">Impossible</button>
+                </div>
+            </div>
+        </section>
 
-        <div class="user-answer">
-            <input type="text" placeholder="Input your answer here!" id="answer"><br>
-            <button id="submitBtn">Submit</button>
-        </div>
-    </section>
+        <!-- Timer Section -->
+        <!-- CONTINUE DESIGN -->
+        <section class="main__timer-container">
+            <div class="main__timer-container__title">
+                <h2>Choose difficulty</h2>
+            </div>
+            <div class="main__timer-container__options-container">
+                <!-- On button -->
+                <div class="main__timer-container__options-container__on">
+                    <button id="onBtn" class="default-btn">On</button>
+                </div>
+                <!-- Off button -->
+                <div class="main__timer-container__options-container__off">
+                    <button id="offBtn" class="default-btn">Off</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Play button -->
+        <section class="main__play-container">
+            <div class="main__play-container__btn">
+                <button id="playBtn">Let's Play!</button>
+            </div>
+        </section>
+
+    </main>
     <script src="main.js"></script>
 </body>
 

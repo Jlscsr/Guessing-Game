@@ -1,0 +1,30 @@
+// Import functions from a separate file
+@import "./functions";
+
+// Map of button labels and their corresponding values
+$label: (
+  "1": "easy",
+  "2": "medium",
+  "3": "hard",
+  "4": "impossible",
+);
+
+// Default button style
+.default-btn {
+  // Use the btnStyle mixin defined in the imported functions file
+  @include btnStyle();
+
+  // Set the background color to a custom accent color
+  background-color: var(--accent-1);
+}
+
+// Difficulty buttons styles generated using a loop
+@each $key, $value in $label {
+  .difficulty-btn-#{$key} {
+    // Use the btnStyle mixin defined in the imported functions file
+    @include btnStyle();
+
+    // Set the background color based on the label value using the setBgColor function
+    background-color: setBgColor($value) !important;
+  }
+}

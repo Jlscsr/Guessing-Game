@@ -1,0 +1,233 @@
+:root {
+  /* Color pallete */
+  --bg-color: #0c0c0f;
+  --primary-color: #f1f1f1;
+  --secondary-color: #0c0c0f;
+  --accent-1: #2196f3;
+  --accent-2: #228b22;
+  /* Background colors for buttons */
+  --easy-btn-bg: #4caf50;
+  --medium-btn-bg: #d32f2f;
+  --hard-btn-bg: #2196f3;
+  --impossible-btn-bg: #e91e63;
+  /* Font styles | Family */
+  --text-italic: "Open Sans Italic";
+  --text-light: "Open Sans Light";
+  --text-regular: "Open Sans Regular";
+  --text-semibold: "Open Sans semibold";
+  --text-bold: "Open Sans bold";
+}
+
+/*
+Font hosting with @font-face
+*/
+/* Import custom font families with different weights and styles */
+/* Italic font */
+@font-face {
+  font-family: "Open Sans Italic";
+  src: local("Open Sans Italic"), local("OpenSans-Italic");
+  src: url("../assets/fonts/OpenSans-Italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+/* Light font with weight 200 */
+@font-face {
+  font-family: "Open Sans Light";
+  src: local("Open Sans Light"), local("OpenSans-Light");
+  src: url("../assets/fonts/OpenSans-Light-webfont.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+/* Regular font */
+@font-face {
+  font-family: "Open Sans Regular";
+  src: local("Open Sans Regular"), local("OpenSans-Regular");
+  src: url("../assets/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Semibold font with weight 500 */
+@font-face {
+  font-family: "Open Sans Semibold";
+  src: local("Open Sans Semibold"), local("OpenSans-Semibold");
+  src: url("../assets/fonts/OpenSans-Semibold-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+/* Bold font */
+@font-face {
+  font-family: "Open Sans Bold";
+  src: local("Open Sans Bold"), local("OpenSans-Bold");
+  src: url("../assets/fonts/OpenSans-Bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+/* Set default font-family for all elements */
+*,
+*::before,
+*::after {
+  font-family: "Open Sans Regular";
+}
+
+/* Set up basic styles for the page */
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: var(--bg-color);
+}
+
+/* Reset padding, margin, and font color for all elements */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  color: var(--secondary-color);
+}
+
+/* This function maps the given label to a corresponding button background color. */
+/* This mixin centers an element within a column using Flexbox. */
+/* This mixin provides default button styles for a guessing game. */
+.default-btn {
+  width: 100%;
+  padding: 0.6rem 1.3rem;
+  font-family: var(--text-regular);
+  font-size: 20px;
+  color: var(--primary-color);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--accent-1);
+}
+
+.difficulty-btn-1 {
+  width: 100%;
+  padding: 0.6rem 1.3rem;
+  font-family: var(--text-regular);
+  font-size: 20px;
+  color: var(--primary-color);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--easy-btn-bg) !important;
+}
+
+.difficulty-btn-2 {
+  width: 100%;
+  padding: 0.6rem 1.3rem;
+  font-family: var(--text-regular);
+  font-size: 20px;
+  color: var(--primary-color);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--medium-btn-bg) !important;
+}
+
+.difficulty-btn-3 {
+  width: 100%;
+  padding: 0.6rem 1.3rem;
+  font-family: var(--text-regular);
+  font-size: 20px;
+  color: var(--primary-color);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--hard-btn-bg) !important;
+}
+
+.difficulty-btn-4 {
+  width: 100%;
+  padding: 0.6rem 1.3rem;
+  font-family: var(--text-regular);
+  font-size: 20px;
+  color: var(--primary-color);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--impossible-btn-bg) !important;
+}
+
+/* This function maps the given label to a corresponding button background color. */
+/* This mixin centers an element within a column using Flexbox. */
+/* This mixin provides default button styles for a guessing game. */
+/* Import functions file */
+/* HEADER */
+.header {
+  display: grid;
+  place-items: center center;
+  padding: 0.938rem 0;
+  /* HEADER CONTENT */
+}
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.563rem;
+  /* HEADER TITLE */
+  /* HEADER SUBTITLE */
+}
+.header__content__title {
+  font-size: 3.125rem;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+}
+.header__content__subtitle {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.header__content__subtitle:hover {
+  color: var(--accent-1);
+}
+
+/* MAIN */
+.main {
+  outline: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4rem;
+  padding: 0.8rem;
+  /* DIFFICULTY CONTAINER */
+  /* TIMER CONTAINER */
+}
+.main__difficulty-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.4rem;
+  /* DIFFICULTY TITLE */
+  /* DIFFICULTY OPTIONS CONTAINER */
+}
+.main__difficulty-container__title h2 {
+  color: var(--primary-color);
+  font-family: var(--text-light);
+}
+.main__difficulty-container__options-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 0.4em;
+  gap: 0.9em;
+}/*# sourceMappingURL=main.css.map */
