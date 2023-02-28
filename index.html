@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/main.css">
+    <script defer src="./script/landingPage.js"></script>
     <title>Guessing Game</title>
 </head>
 
@@ -13,7 +14,7 @@
     <header class="header">
         <div class="header__content">
             <h1 class="header__content__title">Guessing Game</h1>
-            <a href="#" target="_blank" class="header__content__subtitle">by: Julius Raagas</a>
+            <a href="https://github.com/Jlscsr" target="_blank" class="header__content__subtitle">by: Julius Raagas</a>
         </div>
     </header>
 
@@ -25,38 +26,20 @@
             </div>
             <div class="main__difficulty-container__options-container">
                 <!-- Easy button -->
-                <div class="main__difficulty-container__options-container__easy">
-                    <button id="easyBtn" class="difficulty-btn-1">Easy</button>
+                <div class="main__difficulty-container__options-container__easy gg-tooltip-easy">
+                    <button id="easyBtn" class="difficulty-btn-1 dfBtn" value="easy">Easy</button>
                 </div>
                 <!-- Medium button -->
-                <div class="main__difficulty-container__options-container__easy">
-                    <button id="medBtn" class="difficulty-btn-2">Medium</button>
+                <div class="main__difficulty-container__options-container__easy gg-tooltip-medium">
+                    <button id="medBtn" class="difficulty-btn-2 dfBtn" value="medium">Medium</button>
                 </div>
                 <!-- Hard button -->
-                <div class="main__difficulty-container__options-container__easy">
-                    <button id="hardBtn" class="difficulty-btn-3">Hard</button>
+                <div class="main__difficulty-container__options-container__easy gg-tooltip-hard">
+                    <button id="hardBtn" class="difficulty-btn-3 dfBtn" value="hard">Hard</button>
                 </div>
-                <!-- Impossible button -->
-                <div class="main__difficulty-container__options-container__easy">
-                    <button id="impBtn" class="difficulty-btn-4">Impossible</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Timer Section -->
-        <!-- CONTINUE DESIGN -->
-        <section class="main__timer-container">
-            <div class="main__timer-container__title">
-                <h2>Choose difficulty</h2>
-            </div>
-            <div class="main__timer-container__options-container">
-                <!-- On button -->
-                <div class="main__timer-container__options-container__on">
-                    <button id="onBtn" class="default-btn">On</button>
-                </div>
-                <!-- Off button -->
-                <div class="main__timer-container__options-container__off">
-                    <button id="offBtn" class="default-btn">Off</button>
+                <!-- expert button -->
+                <div class="main__difficulty-container__options-container__easy gg-tooltip-expert">
+                    <button id="expBtn" class="difficulty-btn-4 dfBtn" value="expert">Expert</button>
                 </div>
             </div>
         </section>
@@ -64,12 +47,11 @@
         <!-- Play button -->
         <section class="main__play-container">
             <div class="main__play-container__btn">
-                <button id="playBtn">Let's Play!</button>
+                <button id="playBtn" class="default-btn">Let's Play!</button>
             </div>
         </section>
 
     </main>
-    <script src="main.js"></script>
 </body>
 
 </html>

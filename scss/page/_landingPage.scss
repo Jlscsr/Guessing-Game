@@ -1,4 +1,4 @@
-@import "./functions";
+@import "../functions";
 /* Import functions file */
 
 /* HEADER */
@@ -9,7 +9,7 @@
 
   /* HEADER CONTENT */
   &__content {
-    @include columnCenter();
+    @include columnCenter;
     gap: 0.563rem;
 
     /* HEADER TITLE */
@@ -26,7 +26,7 @@
       text-decoration: none;
       transition: all 0.2s ease-out;
       &:hover {
-        color: var(--accent-1);
+        color: #cfcfcf;
       }
     }
   }
@@ -34,16 +34,13 @@
 
 /* MAIN */
 .main {
-  outline: 1px solid red;
-  @include columnCenter();
-  margin-top: 4rem;
+  @include columnCenter;
+  margin-top: 6rem;
   padding: 0.8rem;
 
   /* DIFFICULTY CONTAINER */
   &__difficulty-container {
-    width: 100%;
-    max-width: 600px;
-    padding: 0.4rem;
+    @include container;
 
     /* DIFFICULTY TITLE */
     &__title {
@@ -55,15 +52,28 @@
 
     /* DIFFICULTY OPTIONS CONTAINER */
     &__options-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      margin-top: 0.4em;
-      gap: 0.9em;
+      @include gridTemplateColumn(4);
+      margin-top: 2rem;
+      gap: 0.9rem;
     }
   }
 
-  /* TIMER CONTAINER */
-  &__timer-container {
-    // TODO add styles here
+  &__play-container {
+    @include container;
+    @include flexCenter;
+    margin-top: 2rem;
+
+    &__btn {
+      #playBtn {
+        font-family: var(--text-semibold);
+        transition: all 0.1s ease-out;
+
+        &:not(:disabled):hover {
+          background-color: #1565c0;
+        }
+      }
+    }
   }
+
+  /* Let's Playe container */
 }

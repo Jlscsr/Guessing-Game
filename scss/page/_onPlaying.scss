@@ -1,0 +1,12 @@
+@import "../functions";
+.main-playground {
+  @include columnCenter;
+  margin-top: 3rem;
+  padding: 0.8rem;
+  &__instruction-container {
+    // TODO Continue the styling
+    &__label {
+      outline: 1px solid red;
+    }
+  }
+}

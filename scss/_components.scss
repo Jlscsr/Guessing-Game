@@ -6,10 +6,16 @@ $label: (
   "1": "easy",
   "2": "medium",
   "3": "hard",
-  "4": "impossible",
+  "4": "expert",
 );
 
-// Default button style
+$instruction: (
+  "easy": "Difficulty: Easy \A Number range: 10 \A Time limit: 15 mins",
+  "medium": "Difficulty: Medium \A Number range: 30 \A Time limit: 10 mins",
+  "hard": "Difficulty: Hard \A Number range: 100 \A Time limit: 5 mins",
+  "expert": "Difficulty: Expert \A Number range: 5000 \A Time limit: 2 mins",
+);
+// Default button st
 .default-btn {
   // Use the btnStyle mixin defined in the imported functions file
   @include btnStyle();
@@ -25,6 +31,33 @@ $label: (
     @include btnStyle();
 
     // Set the background color based on the label value using the setBgColor function
-    background-color: setBgColor($value) !important;
+    background-color: setBgColor($value);
+  }
+}
+
+@each $key, $value in $instruction {
+  .gg-tooltip-#{$key} {
+    position: relative;
+
+    &::before {
+      content: "#{$value}";
+      display: none;
+      position: absolute;
+      width: 150px;
+      max-width: 100%;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 12px;
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      border-radius: 5px;
+      font-size: 14px;
+      white-space: pre-wrap;
+    }
+
+    &:hover::before {
+      display: block;
+    }
   }
 }

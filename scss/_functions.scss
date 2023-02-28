@@ -8,7 +8,7 @@
   } @else if $label == "hard" {
     @return var(--hard-btn-bg);
   } @else {
-    @return var(--impossible-btn-bg);
+    @return var(--expert-btn-bg);
   }
 }
 
@@ -18,6 +18,23 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.4rem;
+}
+
+@mixin gridTemplateColumn($value) {
+  display: grid;
+  grid-template-columns: repeat($value, 1fr);
 }
 
 /* This mixin provides default button styles for a guessing game. */
@@ -30,4 +47,12 @@
   cursor: pointer;
   outline: none;
   border: none;
+
+  @content;
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #e5e5e5;
+    color: #a6a6a6;
+  }
 }
