@@ -83,7 +83,7 @@ body {
 *::after {
   padding: 0;
   margin: 0;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 /* This function maps the given label to a corresponding button background color. */
@@ -93,8 +93,9 @@ body {
   width: 100%;
   padding: 0.6rem 1.3rem;
   font-family: var(--text-regular);
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--primary-color);
+  border-radius: 0.313rem;
   cursor: pointer;
   outline: none;
   border: none;
@@ -110,8 +111,9 @@ body {
   width: 100%;
   padding: 0.6rem 1.3rem;
   font-family: var(--text-regular);
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--primary-color);
+  border-radius: 0.313rem;
   cursor: pointer;
   outline: none;
   border: none;
@@ -127,8 +129,9 @@ body {
   width: 100%;
   padding: 0.6rem 1.3rem;
   font-family: var(--text-regular);
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--primary-color);
+  border-radius: 0.313rem;
   cursor: pointer;
   outline: none;
   border: none;
@@ -144,8 +147,9 @@ body {
   width: 100%;
   padding: 0.6rem 1.3rem;
   font-family: var(--text-regular);
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--primary-color);
+  border-radius: 0.313rem;
   cursor: pointer;
   outline: none;
   border: none;
@@ -161,8 +165,9 @@ body {
   width: 100%;
   padding: 0.6rem 1.3rem;
   font-family: var(--text-regular);
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--primary-color);
+  border-radius: 0.313rem;
   cursor: pointer;
   outline: none;
   border: none;
@@ -226,7 +231,7 @@ body {
   position: relative;
 }
 .gg-tooltip-hard::before {
-  content: "Difficulty: Hard \aNumber range: 100 \aTime limit: 5 mins";
+  content: "Difficulty: Hard \aNumber range: 100 \aTime limit: 4 mins";
   display: none;
   position: absolute;
   width: 150px;
@@ -250,7 +255,7 @@ body {
   position: relative;
 }
 .gg-tooltip-expert::before {
-  content: "Difficulty: Expert \aNumber range: 5000 \aTime limit: 2 mins";
+  content: "Difficulty: Expert \aNumber range: 1000 \aTime limit: 2 mins";
   display: none;
   position: absolute;
   width: 150px;
@@ -268,6 +273,29 @@ body {
 }
 .gg-tooltip-expert:hover::before {
   display: block;
+}
+
+.gg-input {
+  width: 150px;
+  max-width: 100%;
+  padding: 0.3em 0.5em;
+  font-size: 1.5rem;
+  text-align: center;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid var(--primary-color);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.gg-input:focus {
+  border-bottom: 2px solid var(--accent-1); /* Change border color */
+  outline: none; /* Remove default outline */
+}
+.gg-input:disabled {
+  border-bottom: 2px solid #e9e9e9; /* Change background color */
+  opacity: 0.5; /* Adjust opacity */
+  cursor: not-allowed; /* Change cursor to indicate input is disabled */
 }
 
 /* This function maps the given label to a corresponding button background color. */
@@ -337,7 +365,7 @@ body {
 }
 .main__difficulty-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 37.5rem;
   padding: 0.4rem;
   /* DIFFICULTY TITLE */
   /* DIFFICULTY OPTIONS CONTAINER */
@@ -354,7 +382,7 @@ body {
 }
 .main__play-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 37.5rem;
   padding: 0.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -393,9 +421,27 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 3rem;
+  gap: 2.5rem;
+  margin-top: 2rem;
   padding: 0.8rem;
 }
 .main-playground__instruction-container__label {
-  outline: 1px solid red;
+  font-size: 1.3rem;
+}
+.main-playground__instruction-container__label h2 {
+  font-family: var(--text-light);
+}
+.main-playground__randnum-container__correct-answer {
+  padding: 0.3rem 3rem;
+  border-radius: 0.313rem;
+  background-color: var(--accent-1);
+}
+.main-playground__randnum-container__correct-answer h2 {
+  font-size: 2rem;
+}
+.main-playground__input-container {
+  margin-top: 2rem;
+}
+.main-playground__input-container__submit-answer {
+  margin-top: 2rem;
 }/*# sourceMappingURL=main.css.map */

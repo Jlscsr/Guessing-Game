@@ -28,7 +28,7 @@
 
 @mixin container {
   width: 100%;
-  max-width: 600px;
+  max-width: 37.5rem;
   padding: 0.4rem;
 }
 
@@ -42,8 +42,9 @@
   width: 100%;
   padding: 0.6rem 1.3rem;
   font-family: var(--text-regular);
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--primary-color);
+  border-radius: 0.313rem;
   cursor: pointer;
   outline: none;
   border: none;

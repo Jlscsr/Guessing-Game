@@ -14,7 +14,8 @@
     <header class="header">
         <div class="header__content">
             <h1 class="header__content__title">Guessing Game</h1>
-            <a href="https://github.com/Jlscsr" target="_blank" class="header__content__subtitle">by: Julius Raagas</a>
+            <a href="https://github.com/Jlscsr/Guessing-Game" target="_blank" class="header__content__subtitle">by:
+                Julius Raagas</a>
         </div>
     </header>
 
@@ -22,11 +23,28 @@
         <!-- Difficulty Section -->
         <section class="main-playground__instruction-container">
             <div class="main-playground__instruction-container__label" id="instructionContainer">
-                <!-- Instruction will be inserted here via javascript -->
+                <!-- Instruction will be injected here via javascript -->
             </div>
         </section>
 
-        <!-- TODO continue structure -->
+        <section class="main-playground__randnum-container">
+            <div class="main-playground__randnum-container__correct-answer" id="correctAnswer">
+                <!-- Instruction will be injected here via javascript -->
+            </div>
+        </section>
+
+        <section class="main-playground__input-container">
+            <form>
+                <div class="main-playground__input-container__input-answer">
+                    <input type="text" id="playerAnswer" name="answer" class="gg-input" autocomplete="off" />
+                </div>
+                <div class="main-playground__input-container__submit-answer">
+                    <button type="submit" id="startSubmit" class="default-btn"></button>
+                </div>
+            </form>
+
+        </section>
+
 </body>
 
 </html>
