@@ -81,10 +81,8 @@ const checkAnswer = (answer, playerAnswer) => {
     totalPoints++;
   } else if (playerAnswer < answer) {
     feedback = "higher";
-    totalPoints = Math.max(0, totalPoints - 1);
   } else {
     feedback = "lower";
-    totalPoints = Math.max(0, totalPoints - 1);
   }
 
   statusContainer.innerHTML = `<h2>${feedback.toUpperCase()} ${
